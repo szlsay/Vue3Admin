@@ -1,9 +1,14 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <svg-icon icon="user" />
+    <span class="svg-container">
+      <svg-icon icon="user" />
+    </span>
+    <span class="svg-container">
+      <svg-icon icon="https://res.lgdsunday.club/user.svg"></svg-icon>
+    </span>
   </nav>
-  <router-view/>
+  <!-- <router-view/> -->
 </template>
 
 <style lang="scss">
