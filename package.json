@@ -20,12 +20,17 @@
     "fuse.js": "^6.6.2",
     "i18next": "^21.9.1",
     "md5": "^2.3.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "rgb-hex": "^4.0.0",
     "screenfull": "^6.0.2",
+    "sortablejs": "^1.15.0",
     "vue": "^3.2.13",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vue3-print-nb": "^0.1.4",
+    "vuex": "^4.0.0",
+    "wangeditor": "^4.7.15",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -44,7 +49,8 @@
     "lint-staged": "^11.1.2",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
-    "svg-sprite-loader": "^6.0.11"
+    "svg-sprite-loader": "^6.0.11",
+    "vue-cli-plugin-element-plus": "^0.0.13"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

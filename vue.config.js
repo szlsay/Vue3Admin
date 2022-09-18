@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const path = require('path')
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -48,5 +49,16 @@ module.exports = defineConfig({
       })
       // 结束
       .end()
+    // 创建一个新的规则，用于处理 element-plus 2 的错误
+    config.module
+      .rule('element-plus-2')
+      .test(/\.mjs$/)
+      // https://webpack.docschina.org/configuration/module/#ruletype
+      .type('javascript/auto')
+      .include.add(/node_modules/)
+      .end()
+  },
+  configureWebpack: {
+    plugins: [new NodePolyfillPlugin()]
   }
 })

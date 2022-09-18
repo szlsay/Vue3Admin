@@ -1,6 +1,6 @@
-// import { MAIN_COLOR } from '@/constant'
-// import { getItem } from '@/utils/storage'
-// import { generateColors } from '@/utils/theme'
+import { MAIN_COLOR } from '@/constant'
+import { getItem } from '@/utils/storage'
+import { generateColors } from '@/utils/theme'
 
 const getters = {
   token: state => state.user.token,
@@ -13,8 +13,8 @@ const getters = {
   },
   cssVar: state => {
     return {
-      ...state.theme.variables
-      // ...generateColors(getItem(MAIN_COLOR))
+      ...state.theme.variables,
+      ...generateColors(getItem(MAIN_COLOR))
     }
   },
   sidebarOpened: state => state.app.sidebarOpened,

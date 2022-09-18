@@ -109,7 +109,7 @@ const loginFromRef = ref(null)
 const store = useStore()
 const router = useRouter()
 const handleLogin = () => {
-  loginFromRef.value.validate((valid) => {
+  loginFromRef.value.validate(valid => {
     if (!valid) return
 
     loading.value = true
@@ -120,7 +120,7 @@ const handleLogin = () => {
         // 登录后操作
         router.push('/')
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err)
         loading.value = false
       })
